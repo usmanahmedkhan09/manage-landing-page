@@ -19,10 +19,11 @@
       alt="header__pattren"
     />
     <menuIconVue
+      v-if="!showMobileView"
       @click="showMobileView = !showMobileView"
       class="header__menu"
     />
-    <mobileMenuVue v-if="showMobileView" />
+    <mobileMenuVue @toggleMenu="showMobileView = false" v-if="showMobileView" />
   </header>
 </template>
 <script lang="ts">

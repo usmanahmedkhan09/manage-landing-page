@@ -8,11 +8,20 @@
   background-color: rgba($color: #000000, $alpha: 0.4);
   padding: 16px;
   display: none;
+  text-align: end;
 
   @include media("<=tablet") {
     display: inline;
   }
 
+  &__crossIcon {
+    margin-left: auto;
+    width: fit-content;
+
+    svg {
+      fill: white;
+    }
+  }
   &__card {
     background-color: white;
     border-radius: 10px;
