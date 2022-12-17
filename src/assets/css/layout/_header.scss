@@ -1,0 +1,29 @@
+// @use "../Base/" as *;
+.header {
+  display: flex;
+  padding: 48px 72px;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    align-self: flex-end;
+  }
+
+  &__list {
+    li {
+      margin: 0px 16px;
+      text-transform: capitalize;
+      font-weight: 500;
+
+      &:hover {
+        color: var(--color-secondary-grayblue);
+      }
+    }
+  }
+
+  &__buttons {
+    .btn:hover {
+      opacity: 0.6;
+    }
+  }
+}
