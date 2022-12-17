@@ -18,16 +18,24 @@
       src="../../assets/images/bg-tablet-pattern.svg"
       alt="header__pattren"
     />
+    <menuIconVue
+      @click="showMobileView = !showMobileView"
+      class="header__menu"
+    />
+    <mobileMenuVue v-if="showMobileView" />
   </header>
 </template>
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
 import logoIconVue from "../icons/logo-icon.vue";
+import menuIconVue from "../icons/menu-icon.vue";
+import mobileMenuVue from "./mobileMenu.vue";
 
 export default defineComponent({
-  components: { logoIconVue },
+  components: { logoIconVue, menuIconVue, mobileMenuVue },
   setup() {
-    return {};
+    const showMobileView = ref(false);
+    return { showMobileView };
   },
 });
 </script>
