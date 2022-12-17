@@ -13,6 +13,11 @@
     <div class="header__buttons">
       <button class="btn">Get Started</button>
     </div>
+    <img
+      class="header__pattren"
+      src="../../assets/images/bg-tablet-pattern.svg"
+      alt="header__pattren"
+    />
   </header>
 </template>
 <script lang="ts">

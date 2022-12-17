@@ -4,6 +4,8 @@
   padding: 48px 72px;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  overflow-x: clip;
 
   &__logo {
     align-self: flex-end;
@@ -25,5 +27,12 @@
     .btn:hover {
       opacity: 0.6;
     }
+  }
+
+  &__pattren {
+    position: absolute;
+    top: -50px;
+    right: -90px;
+    z-index: -1;
   }
 }
