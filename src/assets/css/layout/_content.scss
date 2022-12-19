@@ -1,0 +1,26 @@
+.content {
+  padding: 48px 72px;
+  margin-top: 3rem;
+
+  &__intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &--details {
+      h1 {
+        line-height: 1.2;
+        font-size: 4.3rem;
+        font-weight: 700;
+      }
+
+      p {
+        color: var(--color-secondary-grayblue);
+        margin: 24px 0px;
+      }
+    }
+
+    &--image {
+      padding-right: 92px;
+    }
+  }
+}
