@@ -23,4 +23,52 @@
       padding-right: 92px;
     }
   }
+
+  &__features {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    &--question {
+      .question {
+        font-size: 3.2rem;
+      }
+      .answer {
+        color: var(--color-secondary-grayblue);
+        margin: 24px 0px;
+      }
+    }
+
+    &--details {
+      max-width: 50%;
+
+      .feature__wrapper {
+        display: flex;
+        gap: 24px;
+        margin-bottom: 6rem;
+        max-width: 400px;
+        .index {
+          height: 30px;
+          width: 100px;
+          border-radius: 20px;
+          background-color: var(--color-primary-red);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-weight: 300;
+        }
+
+        .feature {
+          &__title {
+            font-weight: 700;
+          }
+
+          &__des {
+            color: var(--color-secondary-grayblue);
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
 }
