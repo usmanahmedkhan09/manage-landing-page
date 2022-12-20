@@ -1,0 +1,93 @@
+@use "../base/" as *;
+
+.footer {
+  min-height: 200px;
+  background-color: var(--color-secondary-darkblue);
+  display: flex;
+  padding: 48px 72px;
+  justify-content: space-between;
+  .logo_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    // flex: 20%;
+
+    .logo {
+      g {
+        fill: var(--color-primary-red);
+      }
+      path {
+        fill: white;
+      }
+    }
+
+    .social-icons {
+      svg:not(:first-child) {
+        margin-left: 10px;
+      }
+      svg {
+        &:hover {
+          path {
+            fill: var(--color-primary-limegreen);
+          }
+        }
+      }
+    }
+  }
+
+  ul {
+    // flex: 20%;
+    flex-direction: column;
+    align-items: flex-start;
+
+    li {
+      color: var(--color-secondary-palered);
+      font-size: 1.6rem;
+
+      &:hover {
+        color: var(--color-primary-limegreen);
+      }
+    }
+  }
+
+  .button_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    min-width: 30%;
+    // flex: 40%;
+
+    .input__wrapper {
+      .btn {
+        min-height: unset;
+        min-width: unset;
+        width: 60px;
+        min-height: 45px;
+        box-shadow: unset;
+      }
+      input {
+        border: unset;
+        border-radius: 20px;
+        margin-right: 10px;
+        min-height: 45px;
+        padding: 0px 24px;
+
+        &::placeholder {
+          color: var(--color-secondary-grayblue);
+        }
+
+        &:focus {
+          border: unset;
+          outline: unset;
+        }
+      }
+    }
+
+    .rights {
+      color: var(--color-secondary-grayblue);
+      font-size: 1.4rem;
+    }
+  }
+}
