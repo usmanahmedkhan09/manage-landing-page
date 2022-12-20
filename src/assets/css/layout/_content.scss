@@ -34,9 +34,9 @@
 
   &__features {
     display: flex;
-    gap: 40rem;
     margin-top: 4rem;
     padding: 48px 102px;
+    justify-content: space-between;
 
     @include media("<=tablet") {
       padding: 24px;
@@ -46,6 +46,7 @@
     }
 
     &--question {
+      flex: 1 1 50%;
       .question {
         font-size: 3.2rem;
       }
@@ -56,11 +57,12 @@
     }
 
     &--details {
+      flex: 1 1 50%;
       .feature__wrapper {
         display: flex;
         gap: 24px;
         margin-bottom: 6rem;
-        max-width: 400px;
+        max-width: 500px;
         flex-direction: column;
 
         .index__wrapper {

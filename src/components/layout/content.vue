@@ -87,7 +87,7 @@ export default defineComponent({
       {
         title: "Track company-wide progress",
         description:
-          "See how your task fit into the wider vision.Gor from tracking progress at the milestone level all the way done to the smallest of details.Never lose sight of bigger picture again",
+          "See how your day-to-task fit into the wider vision.Our from tracking progress at the milestone level all the way done to the smallest of details.Never lose sight of bigger picture again",
       },
       {
         title: "Advance built-in reports",
