@@ -2,7 +2,7 @@
 
 .header {
   display: flex;
-  padding: 48px 72px;
+  padding: 48px 108px;
   justify-content: space-between;
   align-items: center;
   position: relative;
@@ -44,10 +44,11 @@
 
   &__pattren {
     position: absolute;
-    top: -50px;
-    right: -90px;
+    top: -99px;
+    right: -165px;
     z-index: -1;
-    max-height: 700px;
+    max-height: 750px;
+    max-width: 750px;
   }
 
   &__menu {

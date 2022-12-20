@@ -2,7 +2,7 @@
   margin-top: 3rem;
 
   &__intro {
-    padding: 48px 72px;
+    padding: 48px 102px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -28,7 +28,7 @@
     display: flex;
     gap: 40rem;
     margin-top: 4rem;
-    padding: 48px 72px;
+    padding: 48px 102px;
     &--question {
       .question {
         font-size: 3.2rem;
@@ -127,7 +127,7 @@
     min-height: 250px;
     background-color: var(--color-primary-red);
     align-items: center;
-    padding: 48px 72px;
+    padding: 48px 102px;
     margin-top: 48px;
 
     h1 {

@@ -11,13 +11,14 @@
       </div>
     </div>
     <ul role="list">
+      <li>Home</li>
+      <li>Pricng</li>
+      <li>Products</li>
       <li>About Us</li>
-      <li>Contact</li>
-      <li>Blog</li>
     </ul>
     <ul role="list">
       <li>Careers</li>
-      <li>Support</li>
+      <li>Community</li>
       <li>Privacy Policy</li>
     </ul>
     <div class="button_wrapper">
