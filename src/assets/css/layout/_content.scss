@@ -120,4 +120,27 @@
       margin: 32px 0px;
     }
   }
+
+  &__support {
+    display: flex;
+    justify-content: space-between;
+    min-height: 250px;
+    background-color: var(--color-primary-red);
+    align-items: center;
+    padding: 48px 72px;
+    margin-top: 48px;
+
+    h1 {
+      color: white;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .btn {
+      background-color: white;
+      color: var(--color-primary-red);
+      font-size: 1.4rem;
+      text-align: center;
+    }
+  }
 }
