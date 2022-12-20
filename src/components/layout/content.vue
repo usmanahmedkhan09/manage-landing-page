@@ -51,17 +51,20 @@
     </div>
     <div class="content__views">
       <h2 class="content__views--title">What they've said</h2>
-      <div
-        class="content__views--details"
-        v-for="(view, index) in views"
-        :key="index"
-      >
-        <div class="image__wrapper">
-          <img :src="getImageUrl(view.pic)" alt="" />
+      <div class="views__container">
+        <div
+          class="views__container--details"
+          v-for="(view, index) in views"
+          :key="index"
+        >
+          <div class="image__wrapper">
+            <img :src="getImageUrl(view.pic)" alt="" />
+          </div>
+          <p class="name">{{ view.name }}</p>
+          <q class="view">{{ view.views }}</q>
         </div>
-        <p class="name">{{ view.name }}</p>
-        <q class="view">{{ view.views }}</q>
       </div>
+      <button class="btn">Get Started</button>
     </div>
   </main>
 </template>
