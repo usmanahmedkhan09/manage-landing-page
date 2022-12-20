@@ -49,6 +49,20 @@
         </div>
       </div>
     </div>
+    <div class="content__views">
+      <h2 class="content__views--title">What they've said</h2>
+      <div
+        class="content__views--details"
+        v-for="(view, index) in views"
+        :key="index"
+      >
+        <div class="image__wrapper">
+          <img :src="getImageUrl(view.pic)" alt="" />
+        </div>
+        <p class="name">{{ view.name }}</p>
+        <q class="view">{{ view.views }}</q>
+      </div>
+    </div>
   </main>
 </template>
 <script lang="ts">
@@ -73,7 +87,38 @@ export default defineComponent({
           "Stop jumping from one service to another to communicate, store files,track tasks and share documents.Manage offer an all-in-one team productivity solution",
       },
     ]);
-    return { features };
+
+    const views = ref([
+      {
+        name: "anisha li",
+        pic: "avatar-anisha.png",
+        views:
+          "Manage has supercharged our team's workflow.The ability to maintain visibility on large milestone at all times keeps everyone motivated.",
+      },
+      {
+        name: "ali bravo",
+        pic: "avatar-ali.png",
+        views:
+          "we have been able to cancel so many other subscriptions since using Manage.There is no more cross-channel confusion and everyone is much more focused.",
+      },
+      {
+        name: "richard watts",
+        pic: "avatar-richard.png",
+        views:
+          "Manage allow us to provide structure and processes.It keeps organized and focused.I can't stop recommending Them to everyone I talk to!",
+      },
+      {
+        name: "shanai gough",
+        pic: "avatar-shanai.png",
+        views:
+          "Their software allows us to track, manage and collaborate on our projects from anywhere.It keeps the whole team in-sync without being intrusive",
+      },
+    ]);
+
+    const getImageUrl = (name: any) => {
+      return new URL(`../../assets/images/${name}`, import.meta.url).href;
+    };
+    return { features, views, getImageUrl };
   },
 });
 </script>
