@@ -9,4 +9,8 @@
   font-weight: 500;
   box-shadow: 0 2px 7px var(--color-primary-red);
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }

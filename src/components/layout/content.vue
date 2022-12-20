@@ -39,9 +39,12 @@
           v-for="(feature, index) in features"
           :key="index"
         >
-          <div class="index">0{{ index + 1 }}</div>
+          <div class="index__wrapper">
+            <div class="index">0{{ index + 1 }}</div>
+            <p class="title">{{ feature.title }}</p>
+          </div>
           <div class="feature">
-            <p class="feature__title">{{ feature.title }}</p>
+            <!-- <p class="feature__title">{{ feature.title }}</p> -->
             <p class="feature__des">
               {{ feature.description }}
             </p>
@@ -49,7 +52,7 @@
         </div>
       </div>
     </div>
-    <div class="content__views">
+    <!-- <div class="content__views">
       <h2 class="content__views--title">What they've said</h2>
       <div class="views__container">
         <div
@@ -65,14 +68,14 @@
         </div>
       </div>
       <button class="btn">Get Started</button>
-    </div>
-    <div class="content__support">
+    </div> -->
+    <!-- <div class="content__support">
       <h1>
         Simplify how your team <br />
         works today.
       </h1>
       <button class="btn">Get Started</button>
-    </div>
+    </div> -->
   </main>
 </template>
 <script lang="ts">

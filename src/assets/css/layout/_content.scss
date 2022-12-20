@@ -1,3 +1,5 @@
+@use "../base/" as *;
+
 .content {
   margin-top: 3rem;
 
@@ -6,6 +8,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include media("<=tablet") {
+      padding: 24px;
+      flex-direction: column-reverse;
+      text-align: center;
+    }
     &--details {
       h1 {
         line-height: 1.2;
@@ -29,6 +37,14 @@
     gap: 40rem;
     margin-top: 4rem;
     padding: 48px 102px;
+
+    @include media("<=tablet") {
+      padding: 24px;
+      flex-direction: column-reverse;
+      text-align: center;
+      gap: 5rem;
+    }
+
     &--question {
       .question {
         font-size: 3.2rem;
@@ -40,23 +56,32 @@
     }
 
     &--details {
-      //   max-width: 50%;
-
       .feature__wrapper {
         display: flex;
         gap: 24px;
         margin-bottom: 6rem;
         max-width: 400px;
-        .index {
-          height: 30px;
-          width: 220px;
-          border-radius: 20px;
-          background-color: var(--color-primary-red);
+        flex-direction: column;
+
+        .index__wrapper {
           display: flex;
-          justify-content: center;
+          gap: 16px;
           align-items: center;
-          color: white;
-          font-weight: 300;
+          .index {
+            height: 30px;
+            width: 50px;
+            border-radius: 20px;
+            background-color: var(--color-primary-red);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: 300;
+          }
+
+          .title {
+            font-weight: 700;
+          }
         }
 
         .feature {
@@ -67,6 +92,9 @@
           &__des {
             color: var(--color-secondary-grayblue);
             font-size: 1.4rem;
+            // max-width: 33rem;
+            text-align: left;
+            margin-left: 7rem;
           }
         }
       }
