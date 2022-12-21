@@ -8,12 +8,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 8rem;
 
     @include media("<=tablet") {
       padding: 24px;
       flex-direction: column-reverse;
       text-align: center;
     }
+
     &--details {
       h1 {
         line-height: 1.2;
@@ -72,6 +74,7 @@
           @include media("<=tablet") {
             background-color: #f25f3a30;
             border-radius: 20px 0px 0px 20px;
+            min-height: 45px;
           }
 
           .index {
@@ -84,6 +87,11 @@
             align-items: center;
             color: white;
             font-weight: 300;
+
+            @include media("<=tablet") {
+              min-height: 45px;
+              min-width: 70px;
+            }
           }
 
           .title {
