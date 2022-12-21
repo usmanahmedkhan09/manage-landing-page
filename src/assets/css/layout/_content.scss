@@ -69,6 +69,11 @@
           display: flex;
           gap: 16px;
           align-items: center;
+          @include media("<=tablet") {
+            background-color: #f25f3a30;
+            border-radius: 20px 0px 0px 20px;
+          }
+
           .index {
             height: 30px;
             width: 50px;
