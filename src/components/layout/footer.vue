@@ -1,6 +1,7 @@
 <template>
   <footer class="footer">
     <div class="logo_wrapper">
+      <p>Copyrights 2020. All Rights Reserved</p>
       <Logo class="logo" />
       <div class="social-icons">
         <IconYouTube />
@@ -28,7 +29,7 @@
         <input type="text" placeholder="Updates in your inbox..." />
         <button class="btn">Go</button>
       </div>
-      <!-- <p class="rights">Copyrights 2020. All Rights Reserved</p> -->
+      <p class="rights">Copyrights 2020. All Rights Reserved</p>
     </div>
   </footer>
 </template>

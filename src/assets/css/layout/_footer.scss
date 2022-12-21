@@ -24,6 +24,15 @@
       width: 100%;
     }
 
+    p {
+      color: var(--color-secondary-grayblue);
+      font-size: 1.4rem;
+
+      @include media(">tablet") {
+        display: none;
+      }
+    }
+
     .logo {
       g {
         fill: var(--color-primary-red);
@@ -112,6 +121,10 @@
     .rights {
       color: var(--color-secondary-grayblue);
       font-size: 1.4rem;
+
+      @include media("<=tablet") {
+        display: none;
+      }
     }
   }
 }
