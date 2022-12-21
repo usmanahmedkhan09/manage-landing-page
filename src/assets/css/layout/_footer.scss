@@ -6,11 +6,23 @@
   display: flex;
   padding: 48px 72px;
   justify-content: space-between;
+
+  @include media("<=tablet") {
+    padding: 24px;
+    flex-direction: column-reverse;
+  }
+
   .logo_wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
+    @include media("<=tablet") {
+      flex-direction: column-reverse;
+      gap: 32px;
+      width: 100%;
+    }
 
     .logo {
       g {
@@ -22,6 +34,11 @@
     }
 
     .social-icons {
+      @include media("<=tablet") {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+      }
       svg:not(:first-child) {
         margin-left: 10px;
       }
@@ -35,17 +52,25 @@
     }
   }
 
-  ul {
-    flex-direction: column;
-    align-items: flex-start;
+  .lists__wrapper {
+    @include media("<=tablet") {
+      display: flex;
+      justify-content: space-between;
+      padding: 24px;
+    }
 
-    li {
-      color: var(--color-secondary-palered);
-      font-size: 1.6rem;
-      margin: 5px 0px;
+    ul {
+      flex-direction: column;
+      align-items: flex-start;
 
-      &:hover {
-        color: var(--color-primary-red);
+      li {
+        color: var(--color-secondary-palered);
+        font-size: 1.6rem;
+        margin: 5px 0px;
+
+        &:hover {
+          color: var(--color-primary-red);
+        }
       }
     }
   }

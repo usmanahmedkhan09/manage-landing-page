@@ -107,7 +107,6 @@
           &__des {
             color: var(--color-secondary-grayblue);
             font-size: 1.4rem;
-            // max-width: 33rem;
             text-align: left;
             margin-left: 7rem;
           }
@@ -172,6 +171,12 @@
     align-items: center;
     padding: 48px 102px;
     margin-top: 48px;
+
+    @include media("<=tablet") {
+      flex-direction: column;
+      padding: 24px;
+      text-align: center;
+    }
 
     h1 {
       color: white;

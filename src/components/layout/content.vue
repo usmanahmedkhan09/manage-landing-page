@@ -69,13 +69,13 @@
       </div>
       <button class="btn">Get Started</button>
     </div> -->
-    <!-- <div class="content__support">
+    <div class="content__support">
       <h1>
         Simplify how your team <br />
         works today.
       </h1>
       <button class="btn">Get Started</button>
-    </div> -->
+    </div>
   </main>
 </template>
 <script lang="ts">

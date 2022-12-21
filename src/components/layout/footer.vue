@@ -10,23 +10,25 @@
         <IconPrinterest />
       </div>
     </div>
-    <ul role="list">
-      <li>Home</li>
-      <li>Pricng</li>
-      <li>Products</li>
-      <li>About Us</li>
-    </ul>
-    <ul role="list">
-      <li>Careers</li>
-      <li>Community</li>
-      <li>Privacy Policy</li>
-    </ul>
+    <div class="lists__wrapper">
+      <ul role="list">
+        <li>Home</li>
+        <li>Pricng</li>
+        <li>Products</li>
+        <li>About Us</li>
+      </ul>
+      <ul role="list">
+        <li>Careers</li>
+        <li>Community</li>
+        <li>Privacy Policy</li>
+      </ul>
+    </div>
     <div class="button_wrapper">
       <div class="input__wrapper">
         <input type="text" placeholder="Updates in your inbox..." />
         <button class="btn">Go</button>
       </div>
-      <p class="rights">Copyrights 2020. All Rights Reserved</p>
+      <!-- <p class="rights">Copyrights 2020. All Rights Reserved</p> -->
     </div>
   </footer>
 </template>
