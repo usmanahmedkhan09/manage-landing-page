@@ -62,10 +62,12 @@
   }
 
   .lists__wrapper {
+    display: flex;
+    gap: 20rem;
     @include media("<=tablet") {
-      display: flex;
       justify-content: space-between;
       padding: 24px;
+      gap: unset;
     }
 
     ul {

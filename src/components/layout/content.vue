@@ -52,12 +52,12 @@
         </div>
       </div>
     </div>
-    <!-- <div class="content__views">
+    <div class="content__views">
       <h2 class="content__views--title">What they've said</h2>
       <div class="views__container">
         <div
-          class="views__container--details"
-          v-for="(view, index) in views"
+          class="views__container--details fade"
+          v-for="(view, index) in filteredviews"
           :key="index"
         >
           <div class="image__wrapper">
@@ -66,9 +66,17 @@
           <p class="name">{{ view.name }}</p>
           <q class="view">{{ view.views }}</q>
         </div>
+        <div class="views__container--dots">
+          <div
+            class="dot"
+            v-for="num in [0, 1, 2, 3]"
+            :key="num"
+            :class="num == selectedViewIndex ? 'active' : ''"
+          ></div>
+        </div>
       </div>
       <button class="btn">Get Started</button>
-    </div> -->
+    </div>
     <div class="content__support">
       <h1>
         Simplify how your team <br />
@@ -79,7 +87,7 @@
   </main>
 </template>
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { defineComponent, ref, computed, onMounted } from "vue";
 
 export default defineComponent({
   setup() {
@@ -101,7 +109,7 @@ export default defineComponent({
       },
     ]);
 
-    const views = ref([
+    const views = ref<any>([
       {
         name: "anisha li",
         pic: "avatar-anisha.png",
@@ -128,10 +136,28 @@ export default defineComponent({
       },
     ]);
 
+    const selectedViewIndex = ref(0);
+
+    let filteredviews = computed(() => {
+      return [views.value[selectedViewIndex.value]];
+    });
+
+    const moveViews = () => {
+      if (selectedViewIndex.value > views.value.length) {
+        selectedViewIndex.value = 0;
+      } else {
+        selectedViewIndex.value++;
+      }
+      setTimeout(moveViews, 2000);
+    };
+
+    onMounted(() => {
+      setTimeout(moveViews, 2000);
+    });
     const getImageUrl = (name: any) => {
       return new URL(`../../assets/images/${name}`, import.meta.url).href;
     };
-    return { features, views, getImageUrl };
+    return { features, views, getImageUrl, selectedViewIndex, filteredviews };
   },
 });
 </script>
