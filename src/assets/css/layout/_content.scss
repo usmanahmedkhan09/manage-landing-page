@@ -141,10 +141,15 @@
         background-color: var(--color-secondary-gray);
         padding: 16px;
         margin: 0px 16px;
+        display: none;
 
         @include media("<=tablet") {
           flex-direction: column;
           min-width: unset;
+        }
+
+        &.active {
+          display: block;
         }
 
         .image__wrapper {
@@ -172,7 +177,7 @@
         /* Fading animation */
         &.fade {
           animation-name: fade;
-          animation-duration: 3s;
+          animation-duration: 1.5s;
         }
 
         @keyframes fade {

@@ -59,6 +59,7 @@
           class="views__container--details fade"
           v-for="(view, index) in filteredviews"
           :key="index"
+          :class="view.id == selectedViewIndex ? 'active' : ''"
         >
           <div class="image__wrapper">
             <img :src="getImageUrl(view.pic)" alt="" />
@@ -111,24 +112,28 @@ export default defineComponent({
 
     const views = ref<any>([
       {
+        id: 0,
         name: "anisha li",
         pic: "avatar-anisha.png",
         views:
           "Manage has supercharged our team's workflow.The ability to maintain visibility on large milestone at all times keeps everyone motivated.",
       },
       {
+        id: 1,
         name: "ali bravo",
         pic: "avatar-ali.png",
         views:
           "we have been able to cancel so many other subscriptions since using Manage.There is no more cross-channel confusion and everyone is much more focused.",
       },
       {
+        id: 2,
         name: "richard watts",
         pic: "avatar-richard.png",
         views:
           "Manage allow us to provide structure and processes.It keeps organized and focused.I can't stop recommending Them to everyone I talk to!",
       },
       {
+        id: 3,
         name: "shanai gough",
         pic: "avatar-shanai.png",
         views:
@@ -143,10 +148,10 @@ export default defineComponent({
     });
 
     const moveViews = () => {
-      if (selectedViewIndex.value > views.value.length) {
+      if (selectedViewIndex.value >= views.value.length - 1) {
         selectedViewIndex.value = 0;
       } else {
-        selectedViewIndex.value++;
+        selectedViewIndex.value += 1;
       }
       setTimeout(moveViews, 2000);
     };
