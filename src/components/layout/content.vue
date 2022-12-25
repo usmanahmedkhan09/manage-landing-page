@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="content__features">
-      <div class="content__features--question">
+      <div class="content__features--questions">
         <h1 class="question">
           What's different about
           <br />
@@ -32,6 +32,11 @@
           software is tailor-made for modren digital<br />
           products teams
         </p>
+        <img
+          class="pattren"
+          src="../../assets/images/bg-tablet-pattern.svg"
+          alt="header__pattren"
+        />
       </div>
       <div class="content__features--details">
         <div

@@ -55,14 +55,25 @@
       padding: 24px;
     }
 
-    &--question {
+    &--questions {
       flex: 1 1 50%;
       .question {
         font-size: 3.2rem;
+        position: relative;
       }
       .answer {
         color: var(--color-secondary-grayblue);
         margin: 24px 0px;
+      }
+      .pattren {
+        position: absolute;
+        left: -145px;
+        max-height: 70%;
+        max-width: 50rem;
+
+        @include media("<=desktop") {
+          display: none;
+        }
       }
     }
 
