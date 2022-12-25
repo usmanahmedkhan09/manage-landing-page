@@ -89,9 +89,17 @@
 </template>
 <script lang="ts">
 import { defineComponent, ref, computed, onMounted } from "vue";
+import { useBreakpoints } from "@vueuse/core";
+const breakpoints = useBreakpoints({
+  tablet: 768,
+  laptop: 1024,
+  desktop: 1280,
+});
 
 export default defineComponent({
   setup() {
+    const tablet = ref(breakpoints.greater("tablet"));
+
     const features = ref([
       {
         title: "Track company-wide progress",
@@ -144,24 +152,32 @@ export default defineComponent({
     const selectedViewIndex = ref(0);
 
     let filteredviews = computed(() => {
-      return [views.value[selectedViewIndex.value]];
+      if (!tablet.value) {
+        return [views.value[selectedViewIndex.value]];
+      } else {
+        return views.value;
+      }
     });
 
     const moveViews = () => {
-      if (selectedViewIndex.value >= views.value.length - 1) {
-        selectedViewIndex.value = 0;
-      } else {
-        selectedViewIndex.value += 1;
+      if (!tablet.value) {
+        if (selectedViewIndex.value >= views.value.length - 1) {
+          selectedViewIndex.value = 0;
+        } else {
+          selectedViewIndex.value += 1;
+        }
+        setTimeout(moveViews, 2000);
       }
-      setTimeout(moveViews, 2000);
     };
 
     onMounted(() => {
       setTimeout(moveViews, 2000);
     });
+
     const getImageUrl = (name: any) => {
       return new URL(`../../assets/images/${name}`, import.meta.url).href;
     };
+
     return { features, views, getImageUrl, selectedViewIndex, filteredviews };
   },
 });
