@@ -8,9 +8,13 @@
   position: relative;
   overflow-x: clip;
 
-  @include media("<=tablet") {
+  @include media("<=desktop") {
     padding: 24px 16px;
   }
+
+  // @include media(">tablet", "<=desktop") {
+  //   padding: 24px;
+  // }
 
   &__logo {
     display: inline;
@@ -28,13 +32,13 @@
       }
     }
 
-    @include media("<=tablet") {
+    @include media("<=desktop") {
       display: none;
     }
   }
 
   &__buttons {
-    @include media("<=tablet") {
+    @include media("<=desktop") {
       display: none;
     }
     .btn:hover {
@@ -50,7 +54,7 @@
     max-height: 750px;
     max-width: 750px;
 
-    @include media("<=tablet") {
+    @include media("<=desktop") {
       height: 70rem;
     }
   }
@@ -58,7 +62,7 @@
   &__menu {
     display: none;
 
-    @include media("<=tablet") {
+    @include media("<=desktop") {
       display: inline;
       align-self: baseline;
     }

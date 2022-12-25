@@ -7,7 +7,7 @@
   padding: 48px 72px;
   justify-content: space-between;
 
-  @include media("<=tablet") {
+  @include media("<=desktop") {
     padding: 24px;
     flex-direction: column-reverse;
   }
@@ -18,7 +18,7 @@
     justify-content: space-between;
     align-items: center;
 
-    @include media("<=tablet") {
+    @include media("<=desktop") {
       flex-direction: column-reverse;
       gap: 32px;
       width: 100%;
@@ -28,7 +28,7 @@
       color: var(--color-secondary-grayblue);
       font-size: 1.4rem;
 
-      @include media(">tablet") {
+      @include media(">desktop") {
         display: none;
       }
     }
@@ -43,7 +43,7 @@
     }
 
     .social-icons {
-      @include media("<=tablet") {
+      @include media("<=desktop") {
         display: flex;
         width: 100%;
         justify-content: space-evenly;
@@ -64,7 +64,7 @@
   .lists__wrapper {
     display: flex;
     gap: 20rem;
-    @include media("<=tablet") {
+    @include media("<=desktop") {
       justify-content: space-between;
       padding: 24px;
       gap: unset;
@@ -124,7 +124,7 @@
       color: var(--color-secondary-grayblue);
       font-size: 1.4rem;
 
-      @include media("<=tablet") {
+      @include media("<=desktop") {
         display: none;
       }
     }

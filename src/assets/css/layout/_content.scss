@@ -16,6 +16,10 @@
       text-align: center;
     }
 
+    @include media("<=desktop") {
+      padding: 24px;
+    }
+
     &--details {
       h1 {
         line-height: 1.2;
@@ -45,6 +49,10 @@
       flex-direction: column-reverse;
       text-align: center;
       gap: 5rem;
+    }
+
+    @include media("<=desktop") {
+      padding: 24px;
     }
 
     &--question {
